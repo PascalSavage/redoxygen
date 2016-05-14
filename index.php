@@ -15,7 +15,7 @@ $data = array("id" => "sample string1",
 $data_string = json_encode($data);   */
 
 
-$data = array("Stepname" => "Zberi ponudbo");
+$data = array("Stepname" => "ProsnjaZaKredit");
 $data_string = json_encode($data);
 echo "$data_string";
 ?>

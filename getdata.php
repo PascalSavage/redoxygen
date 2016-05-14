@@ -36,8 +36,12 @@ curl_setopt($ch, CURLOPT_URL, 'http://88.200.23.139/Crea.Ultimus.Api/api/Process
 $result = curl_exec($ch);
 curl_close($ch);
 
-$obj = json_decode($result);
+//$array = str_split(&result);
 
-echo $obj[0];
+$json_d = json_decode($result, true);
+
+foreach ($json_d as $j)
+    echo $j['Id'];
+
 
 ?>
