@@ -197,8 +197,6 @@ else if ($user == "user2"){
                                         echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Confirm</a></td>";
                                         echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Reject</a></td>";
                                         echo "</tr>";
-                                        echo "</tbody>";
-                                        echo "</table>";
                                     }
                                 } else {
                                     echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
@@ -288,14 +286,12 @@ else if ($user == "user2"){
                                         echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Confirm</a></td>";
                                         echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Reject</a></td>";
                                         echo "</tr>";
-                                        echo "</tbody>";
-                                        echo "</table>";
                                     }
                                 } else {
                                     echo "<p>No Task</p>";
-                                    echo "</tbody>";
-                                    echo "</table>";
                                 }
+                                echo "</tbody>";
+                                echo "</table>";
                                 echo "</br>";
                             }
                                                     
