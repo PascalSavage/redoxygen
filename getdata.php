@@ -13,6 +13,31 @@ $result = curl_exec($ch);
 curl_close($ch);
 
 $obj = json_decode($result, true);
+
+if ($user == "user1"){
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_USERPWD, "crea0\\"."user4".":".$pass);  
+    curl_setopt($ch, CURLOPT_URL, $url);
+    $result4 = curl_exec($ch);
+    curl_close($ch);
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_USERPWD, "crea0\\"."user2".":".$pass);  
+    curl_setopt($ch, CURLOPT_URL, $url);
+    $result2 = curl_exec($ch);
+    curl_close($ch);
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_USERPWD, "crea0\\"."user3".":".$pass);  
+    curl_setopt($ch, CURLOPT_URL, $url);
+    $result3 = curl_exec($ch);
+    curl_close($ch);
+}
+
 //echo $obj;
 /*foreach ($obj as $value) {
     echo "<p>".$value['Id']."<p>";
@@ -110,23 +135,44 @@ $obj = json_decode($result, true);
             <div class="row">
                 <table style="width:100%">
                          <?php
-                         if(sizeof($obj) > 0){
-                    foreach ($obj as $value) {
-                        echo "<tr>";
-    echo "<td>".$value['Id']."</td>";
-    echo "<td>".$value['IncidentNumber']."</td>";
-    echo "<td>".$value['StepName']."</td>";
-  ///  echo "<td><form method=\"get\" action=\"confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."\"> 
-   // <button type=\"submit\">Comfirm</button>
-//</form></td>";
-   // echo "<td><form><INPUT TYPE=\"button\" onClick=\"parent.location=\'confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'></form></td>";
-    echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Comfirm</a></td>";
-    echo "</tr>";
-}
-}else{
-     echo "<p>No Task</p>";
-}
-                    
+     if(sizeof($obj) > 0){
+        foreach ($obj as $value) {
+            echo "<tr>";
+            echo "<td>".$value['Id']."</td>";
+            echo "<td>".$value['IncidentNumber']."</td>";
+            echo "<td>".$value['StepName']."</td>";
+          ///  echo "<td><form method=\"get\" action=\"confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."\"> 
+           // <button type=\"submit\">Comfirm</button>
+        //</form></td>";
+           // echo "<td><form><INPUT TYPE=\"button\" onClick=\"parent.location=\'confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'></form></td>";
+            echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Comfirm</a></td>";
+            echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Reject</a></td>";
+            echo "</tr>";
+            
+            echo "<tr><td>Uporabnik 4 naloge</td></tr>";
+            $obj4 = json_decode($result4, true);
+            if(sizeof($obj4) > 0){
+                foreach ($ob4 as $value) {
+                    echo "<tr>";
+                    echo "<td>".$value['Id']."</td>";
+                    echo "<td>".$value['IncidentNumber']."</td>";
+                    echo "<td>".$value['StepName']."</td>";
+                  ///  echo "<td><form method=\"get\" action=\"confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."\"> 
+                   // <button type=\"submit\">Comfirm</button>
+                //</form></td>";
+                   // echo "<td><form><INPUT TYPE=\"button\" onClick=\"parent.location=\'confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'></form></td>";
+                    echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Comfirm</a></td>";
+                    echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Reject</a></td>";
+                    echo "</tr>";
+                }
+            } else {
+                 echo "<p>No Task</p>";
+            }
+        }
+    }else{
+         echo "<p>No Task</p>";
+    }
+                            
                     ?>
                         
                     

@@ -1,12 +1,12 @@
 <?php
 
-$user = "user3";
+//$user = "user3";
 $pass = "P@ssword";
 
 
-$id = "05142303ca24b48071023d3b4de06f";
-$incident = 35;
-$step = "OdobritevReferenta";
+//$id = "05142303ca24b48071023d3b4de06f";
+//$incident = 35;
+//$step = "OdobritevReferenta";
 $value = 20000;
 
 $user = $_GET['user'];
@@ -15,7 +15,7 @@ $incident = $_GET['inci'];
 $step = $_GET['step'];
 
 
-$d2 = array("OdobritevReferenta" => "Zavrnjeno");
+$d2 = array($step => "Zavrnjeno");
 $parametri = json_encode($d2);
 
 $data = array("id" => $id,
@@ -33,8 +33,9 @@ curl_setopt($ch, CURLOPT_USERPWD, "crea0\\".$user.":".$pass);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
     'Content-Type: application/json',                                                                                
     'Content-Length: ' . strlen($data_string))                                                                       
-);                                                                                                                   
-                                                                                                                     
+);                                                                                                              
+ $newURL = "getdata.php?user=".$user;
+ header('Location: '.$newURL);                                                                                    
 $result = curl_exec($ch);
 
 
