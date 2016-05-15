@@ -1,5 +1,5 @@
 <?php
-$d2 = array('Value' => 300);
+$d2 = array('Value' => $_POST['Value']);
 $parametri = json_encode($d2);
 
 $data = array("Stepname" => "ProsnjaZaKredit",
