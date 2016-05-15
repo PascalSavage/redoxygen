@@ -166,7 +166,7 @@ else if ($user == "user2"){
         echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">User 4 tasks</td></tr>";
         $obj4 = json_decode($result4, true);
         if(sizeof($obj4) > 0){
-            foreach ($ob4 as $value) {
+            foreach ($obj4 as $value) {
                 echo "<tr>";
                 echo "<td>".$value['Id']."</td>";
                 echo "<td>".$value['IncidentNumber']."</td>";
@@ -199,7 +199,7 @@ else if ($user == "user2"){
                 echo "</tr>";
             }
         } else {
-             echo "<p>No Task</p>";
+            echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
         }
         echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">Users 3 tasks</td></tr>";
         $obj3 = json_decode($result3, true);
@@ -218,7 +218,7 @@ else if ($user == "user2"){
                 echo "</tr>";
             }
         } else {
-             echo "<p>No Task</p>";
+            echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
         }
     }
     else if ($user == "user2") {
