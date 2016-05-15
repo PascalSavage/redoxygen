@@ -150,20 +150,17 @@ else if ($user == "user2"){
             echo "<td>".$value['Id']."</td>";
             echo "<td>".$value['IncidentNumber']."</td>";
             echo "<td>".$value['StepName']."</td>";
-          ///  echo "<td><form method=\"get\" action=\"confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."\"> 
-           // <button type=\"submit\">Comfirm</button>
-        //</form></td>";
-           // echo "<td><form><INPUT TYPE=\"button\" onClick=\"parent.location=\'confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'></form></td>";
-            echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Comfirm</a></td>";
-            echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Reject</a></td>";
+            echo "<td>".$value['Parameters']['Value']."</td>";
+                echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."' >Confirm</a></td>";
+                echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."' >Reject</a></td>";
             echo "</tr>";
         }
     }
     else {
-     echo "<p>No Task</p>";
+        echo "<tr><td colspan=\"6\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
     }
     if ($user == "user1"){
-        echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">User 4 tasks</td></tr>";
+        echo "<tr><td colspan=\"6\" style=\"width:100%\" align=\"center\">User 4 tasks</td></tr>";
         $obj4 = json_decode($result4, true);
         if(sizeof($obj4) > 0){
             foreach ($obj4 as $value) {
@@ -171,18 +168,15 @@ else if ($user == "user2"){
                 echo "<td>".$value['Id']."</td>";
                 echo "<td>".$value['IncidentNumber']."</td>";
                 echo "<td>".$value['StepName']."</td>";
-              ///  echo "<td><form method=\"get\" action=\"confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."\"> 
-               // <button type=\"submit\">Comfirm</button>
-            //</form></td>";
-               // echo "<td><form><INPUT TYPE=\"button\" onClick=\"parent.location=\'confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'></form></td>";
-                echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Comfirm</a></td>";
-                echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Reject</a></td>";
+                echo "<td>".$value['Parameters']['Value']."</td>";
+                echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."' >Confirm</a></td>";
+                echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."' >Reject</a></td>";
                 echo "</tr>";
             }
         } else {
-            echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
+            echo "<tr><td colspan=\"6\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
         }
-        echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">Users 2 tasks</td></tr>";
+        echo "<tr><td colspan=\"6\" style=\"width:100%\" align=\"center\">Users 2 tasks</td></tr>";
         $obj2 = json_decode($result2, true);
         if(sizeof($obj2) > 0){
             foreach ($obj2 as $value) {
@@ -190,18 +184,15 @@ else if ($user == "user2"){
                 echo "<td>".$value['Id']."</td>";
                 echo "<td>".$value['IncidentNumber']."</td>";
                 echo "<td>".$value['StepName']."</td>";
-              ///  echo "<td><form method=\"get\" action=\"confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."\"> 
-               // <button type=\"submit\">Comfirm</button>
-            //</form></td>";
-               // echo "<td><form><INPUT TYPE=\"button\" onClick=\"parent.location=\'confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'></form></td>";
-                echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Comfirm</a></td>";
-                echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Reject</a></td>";
+echo "<td>".$value['Parameters']['Value']."</td>";
+                echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."' >Confirm</a></td>";
+                echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."' >Reject</a></td>";
                 echo "</tr>";
             }
         } else {
-            echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
+            echo "<tr><td colspan=\"6\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
         }
-        echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">Users 3 tasks</td></tr>";
+        echo "<tr><td colspan=\"6\" style=\"width:100%\" align=\"center\">Users 3 tasks</td></tr>";
         $obj3 = json_decode($result3, true);
         if(sizeof($obj3) > 0){
             foreach ($obj3 as $value) { 
@@ -209,20 +200,17 @@ else if ($user == "user2"){
                 echo "<td>".$value['Id']."</td>";
                 echo "<td>".$value['IncidentNumber']."</td>";
                 echo "<td>".$value['StepName']."</td>";
-              ///  echo "<td><form method=\"get\" action=\"confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."\"> 
-               // <button type=\"submit\">Comfirm</button>
-            //</form></td>";
-               // echo "<td><form><INPUT TYPE=\"button\" onClick=\"parent.location=\'confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'></form></td>";
-                echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Comfirm</a></td>";
-                echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Reject</a></td>";
+                echo "<td>".$value['Parameters']['Value']."</td>";
+                echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."' >Confirm</a></td>";
+                echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."' >Reject</a></td>";
                 echo "</tr>";
             }
         } else {
-            echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
+            echo "<tr><td colspan=\"6\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
         }
     }
     else if ($user == "user2") {
-        echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">Users 3 tasks</td></tr>";
+        echo "<tr><td colspan=\"6\" style=\"width:100%\" align=\"center\">Users 3 tasks</td></tr>";
         $obj3 = json_decode($result3, true);
         if(sizeof($obj3) > 0){
             foreach ($obj3 as $value) { 
@@ -230,16 +218,13 @@ else if ($user == "user2"){
                 echo "<td>".$value['Id']."</td>";
                 echo "<td>".$value['IncidentNumber']."</td>";
                 echo "<td>".$value['StepName']."</td>";
-              ///  echo "<td><form method=\"get\" action=\"confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."\"> 
-               // <button type=\"submit\">Comfirm</button>
-            //</form></td>";
-               // echo "<td><form><INPUT TYPE=\"button\" onClick=\"parent.location=\'confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'></form></td>";
-                echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Comfirm</a></td>";
-                echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Reject</a></td>";
+                echo "<td>".$value['Parameters']['Value']."</td>";
+                echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."' >Confirm</a></td>";
+                echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."' >Reject</a></td>";
                 echo "</tr>";
             }
         } else {
-             echo "<p>No Task</p>";
+            echo "<tr><td colspan=\"6\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
         }
     }
                             
