@@ -1,9 +1,9 @@
 <?php
 
-$user = "user3";//$_GET["user"];
+$user = $_GET["user"];
 $pass = "P@ssword";
 $url = "http://88.200.23.139/Crea.Ultimus.Api/api/Process/Nabava/";
-$id = "05150628dbb480a7b81043d80338bc";//$_GET["id"];
+$id = $_GET["id"];
 $url = $url . $id;
 
 $ch = curl_init();
@@ -96,7 +96,7 @@ $obj = json_decode($result);
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Podroben pogled za prošnjo ?> </h2>
+                    <h2 class="section-heading">Podroben pregled prošnje </h2>
                 </div>
             </div>
         </div>
@@ -105,35 +105,30 @@ $obj = json_decode($result);
     <section>
         <div class="container">
             <div class="row">
-                <div class="container">
-                    <h2>Moje naloge</h2>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                              <th>Id</th>
-                              <th>Incidenčna šifra</th>
-                              <th>Ime naloge</th>
-                              <th>Potrdi</th>
-                              <th>Zavrni</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                                if(sizeof($obj) > 0){
-                                    echo "<tr>";
-                                    echo "<td>".$obj->{'Id'}."</td>";
-                                    echo "<td>".$obj->{'IncidentNumber'}."</td>";
-                                    echo "<td>".$obj->{'StepName'}."</td>";
-                                    echo "</tr>";
-                                }
-                                else {
-                                    echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">Ni procesa</td></tr>";
-                                }
-                                echo "</tbody>";
-                                echo "</table>";
-                                echo "</br>";
-                            ?>
-                    </table>
+                <div class="container" align="center">
+                     <div>
+                        <label>Ime</label>
+                        <?php echo $obj->{'Parameters'}->{'Ime'} ?>
+                        <br/>
+                        <label>Priimek</label>
+                        <?php echo $obj->{'Parameters'}->{'Priimek'} ?>
+                        <br/>
+                        <label>Rojstni datum</label>
+                        <?php echo $obj->{'Parameters'}->{'RojstniDatum'} ?>
+                        <br/>
+                        <label>Email</label>
+                        <?php echo $obj->{'Parameters'}->{'Email'} ?>
+                        <br/>
+                        <label>Naslov</label>
+                        <?php echo $obj->{'Parameters'}->{'Naslov'} ?>
+                        <br/>
+                        <label>Pošta</label>
+                        <?php echo $obj->{'Parameters'}->{'Posta'} ?>
+                        <br/>
+                         <label>Znesek</label>
+                        <?php echo $obj->{'Parameters'}->{'Value'} ?>
+                        <br/>
+                    </div>
                 </div>
 
             </div>
