@@ -104,7 +104,7 @@ else if ($user == "user2"){
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.html">Start Bootstrap</a>
+                <a class="navbar-brand page-scroll" href="index.html">Dragonhack 2016</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -129,11 +129,11 @@ else if ($user == "user2"){
         <!-- /.container-fluid -->
     </nav>
 
-    <section class="bg-primary" id="about">
+    <section class="bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Natančnejši pogled nekega Userja.</h2>
+                    <h2 class="section-heading">Podroben pogled: <?php echo $user ?> </h2>
                 </div>
             </div>
         </div>
@@ -142,97 +142,167 @@ else if ($user == "user2"){
     <section>
         <div class="container">
             <div class="row">
-                <table style="width:100%">
-                         <?php
-     if(sizeof($obj) > 0){
-        foreach ($obj as $value) {
-            echo "<tr>";
-            echo "<td>".$value['Id']."</td>";
-            echo "<td>".$value['IncidentNumber']."</td>";
-            echo "<td>".$value['StepName']."</td>";
-            echo "<td>".$value['Parameters']['Value']."</td>";
-                echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."' >Confirm</a></td>";
-                echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."' >Reject</a></td>";
-            echo "</tr>";
-        }
-    }
-    else {
-        echo "<tr><td colspan=\"6\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
-    }
-    if ($user == "user1"){
-        echo "<tr><td colspan=\"6\" style=\"width:100%\" align=\"center\">User 4 tasks</td></tr>";
-        $obj4 = json_decode($result4, true);
-        if(sizeof($obj4) > 0){
-            foreach ($obj4 as $value) {
-                echo "<tr>";
-                echo "<td>".$value['Id']."</td>";
-                echo "<td>".$value['IncidentNumber']."</td>";
-                echo "<td>".$value['StepName']."</td>";
-                echo "<td>".$value['Parameters']['Value']."</td>";
-                echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."' >Confirm</a></td>";
-                echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."' >Reject</a></td>";
-                echo "</tr>";
-            }
-        } else {
-            echo "<tr><td colspan=\"6\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
-        }
-        echo "<tr><td colspan=\"6\" style=\"width:100%\" align=\"center\">Users 2 tasks</td></tr>";
-        $obj2 = json_decode($result2, true);
-        if(sizeof($obj2) > 0){
-            foreach ($obj2 as $value) {
-                echo "<tr>";
-                echo "<td>".$value['Id']."</td>";
-                echo "<td>".$value['IncidentNumber']."</td>";
-                echo "<td>".$value['StepName']."</td>";
-echo "<td>".$value['Parameters']['Value']."</td>";
-                echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."' >Confirm</a></td>";
-                echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."' >Reject</a></td>";
-                echo "</tr>";
-            }
-        } else {
-            echo "<tr><td colspan=\"6\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
-        }
-        echo "<tr><td colspan=\"6\" style=\"width:100%\" align=\"center\">Users 3 tasks</td></tr>";
-        $obj3 = json_decode($result3, true);
-        if(sizeof($obj3) > 0){
-            foreach ($obj3 as $value) { 
-                echo "<tr>";
-                echo "<td>".$value['Id']."</td>";
-                echo "<td>".$value['IncidentNumber']."</td>";
-                echo "<td>".$value['StepName']."</td>";
-                echo "<td>".$value['Parameters']['Value']."</td>";
-                echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."' >Confirm</a></td>";
-                echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."' >Reject</a></td>";
-                echo "</tr>";
-            }
-        } else {
-            echo "<tr><td colspan=\"6\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
-        }
-    }
-    else if ($user == "user2") {
-        echo "<tr><td colspan=\"6\" style=\"width:100%\" align=\"center\">Users 3 tasks</td></tr>";
-        $obj3 = json_decode($result3, true);
-        if(sizeof($obj3) > 0){
-            foreach ($obj3 as $value) { 
-                echo "<tr>";
-                echo "<td>".$value['Id']."</td>";
-                echo "<td>".$value['IncidentNumber']."</td>";
-                echo "<td>".$value['StepName']."</td>";
-                echo "<td>".$value['Parameters']['Value']."</td>";
-                echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."' >Confirm</a></td>";
-                echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."' >Reject</a></td>";
-                echo "</tr>";
-            }
-        } else {
-            echo "<tr><td colspan=\"6\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
-        }
-    }
-                            
-    ?>
-                        
-                    
-                   
-                </table>
+<<<<<<< HEAD
+                <div class="container">
+                    <h2>Moje naloge</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                              <th>Id</th>
+                              <th>Incident number</th>
+                              <th>Task name</th>
+                              <th>Confirm</th>
+                              <th>Reject</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            if(sizeof($obj) > 0){
+                                foreach ($obj as $value) {
+                                    echo "<tr>";
+                                    echo "<td>".$value['Id']."</td>";
+                                    echo "<td>".$value['IncidentNumber']."</td>";
+                                    echo "<td>".$value['StepName']."</td>";
+                                    echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Confirm</a></td>";
+                                    echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Reject</a></td>";
+                                    echo "</tr>";
+                                }
+                            }
+                            else {
+                                echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
+                            }
+                            echo "</tbody>";
+                            echo "</table>";
+                            echo "</br>";
+                            if ($user == "user1"){
+                                echo "<h2>User's 4 tasks</h2>";
+                                echo "<table class='table'>";
+                                echo "<thead>";
+                                echo "<tr>";
+                                echo "<th>Id</th>";
+                                echo "<th>Incident number</th>";
+                                echo "<th>Task name</th>";
+                                echo "<th>Confirm</th>";
+                                echo "<th>Reject</th>";
+                                echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+                                $obj4 = json_decode($result4, true);
+                                if(sizeof($obj4) > 0){
+                                    foreach ($obj4 as $value) {
+                                        echo "<tr>";
+                                        echo "<td>".$value['Id']."</td>";
+                                        echo "<td>".$value['IncidentNumber']."</td>";
+                                        echo "<td>".$value['StepName']."</td>";
+                                        echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Confirm</a></td>";
+                                        echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Reject</a></td>";
+                                        echo "</tr>";
+                                        echo "</tbody>";
+                                        echo "</table>";
+                                    }
+                                } else {
+                                    echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
+                                }
+                                echo "</tbody>";
+                                echo "</table>";
+                                echo "</br>";
+                                echo "<h2>User's 2 tasks</h2>";
+                                echo "<table class='table'>";
+                                echo "<thead>";
+                                echo "<tr>";
+                                echo "<th>Id</th>";
+                                echo "<th>Incident number</th>";
+                                echo "<th>Task name</th>";
+                                echo "<th>Confirm</th>";
+                                echo "<th>Reject</th>";
+                                echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+                                $obj2 = json_decode($result2, true);
+                                if(sizeof($obj2) > 0){
+                                    foreach ($obj2 as $value) {
+                                        echo "<tr>";
+                                        echo "<td>".$value['Id']."</td>";
+                                        echo "<td>".$value['IncidentNumber']."</td>";
+                                        echo "<td>".$value['StepName']."</td>";
+                                        echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Confirm</a></td>";
+                                        echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Reject</a></td>";
+                                        echo "</tr>";
+                                    }
+                                } else {
+                                    echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
+                                }
+                                echo "</tbody>";
+                                echo "</table>";
+                                echo "</br>";
+                                echo "<h2>User's 3 tasks</h2>";
+                                echo "<table class='table'>";
+                                echo "<thead>";
+                                echo "<tr>";
+                                echo "<th>Id</th>";
+                                echo "<th>Incident number</th>";
+                                echo "<th>Task name</th>";
+                                echo "<th>Confirm</th>";
+                                echo "<th>Reject</th>";
+                                echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+                                $obj3 = json_decode($result3, true);
+                                if(sizeof($obj3) > 0){
+                                    foreach ($obj3 as $value) { 
+                                        echo "<tr>";
+                                        echo "<td>".$value['Id']."</td>";
+                                        echo "<td>".$value['IncidentNumber']."</td>";
+                                        echo "<td>".$value['StepName']."</td>";
+                                        echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Confirm</a></td>";
+                                        echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Reject</a></td>";
+                                        echo "</tr>";
+                                    }
+                                } else {
+                                    echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
+                                }
+                                echo "</tbody>";
+                                echo "</table>";
+                                echo "</br>";
+                            }
+                            else if ($user == "user2") {
+                                echo "<h2>User's 3 tasks</h2>";
+                                echo "<table class='table'>";
+                                echo "<thead>";
+                                echo "<tr>";
+                                echo "<th>Id</th>";
+                                echo "<th>Incident number</th>";
+                                echo "<th>Task name</th>";
+                                echo "<th>Confirm</th>";
+                                echo "<th>Reject</th>";
+                                echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+                                $obj3 = json_decode($result3, true);
+                                if(sizeof($obj3) > 0){
+                                    foreach ($obj3 as $value) { 
+                                        echo "<tr>";
+                                        echo "<td>".$value['Id']."</td>";
+                                        echo "<td>".$value['IncidentNumber']."</td>";
+                                        echo "<td>".$value['StepName']."</td>";
+                                        echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Confirm</a></td>";
+                                        echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Reject</a></td>";
+                                        echo "</tr>";
+                                        echo "</tbody>";
+                                        echo "</table>";
+                                    }
+                                } else {
+                                    echo "<p>No Task</p>";
+                                    echo "</tbody>";
+                                    echo "</table>";
+                                }
+                                echo "</br>";
+                            }
+                                                    
+                            ?>
+                    </table>
+                </div>
+
             </div>
         </div>
     </section>
