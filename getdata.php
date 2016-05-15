@@ -170,13 +170,13 @@ else if ($user == "user2"){
                                 }
                             }
                             else {
-                                echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
+                                echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">Ni nalog</td></tr>";
                             }
                             echo "</tbody>";
                             echo "</table>";
                             echo "</br>";
                             if ($user == "user1"){
-                                echo "<h2>User's 4 tasks</h2>";
+                                echo "<h2>Naloge uporabnika 4</h2>";
                                 echo "<table class='table'>";
                                 echo "<thead>";
                                 echo "<tr>";
@@ -200,7 +200,7 @@ else if ($user == "user2"){
                                         echo "</tr>";
                                     }
                                 } else {
-                                    echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
+                                    echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">Ni nalog</td></tr>";
                                 }
                                 echo "</tbody>";
                                 echo "</table>";
@@ -229,12 +229,12 @@ else if ($user == "user2"){
                                         echo "</tr>";
                                     }
                                 } else {
-                                    echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
+                                    echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">Ni nalog</td></tr>";
                                 }
                                 echo "</tbody>";
                                 echo "</table>";
                                 echo "</br>";
-                                echo "<h2>User's 3 tasks</h2>";
+                                echo "<h2>Naloge uporabnika 3</h2>";
                                 echo "<table class='table'>";
                                 echo "<thead>";
                                 echo "<tr>";
@@ -258,14 +258,14 @@ else if ($user == "user2"){
                                         echo "</tr>";
                                     }
                                 } else {
-                                    echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">No tasks</td></tr>";
+                                    echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">Ni nalog</td></tr>";
                                 }
                                 echo "</tbody>";
                                 echo "</table>";
                                 echo "</br>";
                             }
                             else if ($user == "user2") {
-                                echo "<h2>User's 3 tasks</h2>";
+                                echo "<h2>Naloge uporabnika 3</h2>";
                                 echo "<table class='table'>";
                                 echo "<thead>";
                                 echo "<tr>";
@@ -289,7 +289,7 @@ else if ($user == "user2"){
                                         echo "</tr>";
                                     }
                                 } else {
-                                    echo "<p>No Task</p>";
+                                    echo "<tr><td colspan=\"5\" style=\"width:100%\" align=\"center\">Ni nalog</td></tr>";
                                 }
                                 echo "</tbody>";
                                 echo "</table>";
