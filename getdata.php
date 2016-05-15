@@ -66,7 +66,7 @@ else if ($user == "user2"){
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Creative - Start Bootstrap Theme</title>
+    <title>RedOxygen2016</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -111,16 +111,16 @@ else if ($user == "user2"){
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#about">O nas</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="users.html">Users</a>
+                        <a class="page-scroll" href="users.html">Uporabniki</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#portfolio">Portfolio</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#contact">Kontakt</a>
                     </li>
                 </ul>
             </div>
@@ -148,10 +148,10 @@ else if ($user == "user2"){
                         <thead>
                             <tr>
                               <th>Id</th>
-                              <th>Incident number</th>
-                              <th>Task name</th>
-                              <th>Confirm</th>
-                              <th>Reject</th>
+                              <th>Incidenčna šifra</th>
+                              <th>Ime naloge</th>
+                              <th>Potrdi</th>
+                              <th>Zavrni</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -162,8 +162,8 @@ else if ($user == "user2"){
                                     echo "<td>".$value['Id']."</td>";
                                     echo "<td>".$value['IncidentNumber']."</td>";
                                     echo "<td>".$value['StepName']."</td>";
-                                    echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Confirm</a></td>";
-                                    echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Reject</a></td>";
+                                    echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Potrdi</a></td>";
+                                    echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Zavrni</a></td>";
                                     echo "</tr>";
                                 }
                             }
@@ -179,10 +179,10 @@ else if ($user == "user2"){
                                 echo "<thead>";
                                 echo "<tr>";
                                 echo "<th>Id</th>";
-                                echo "<th>Incident number</th>";
-                                echo "<th>Task name</th>";
-                                echo "<th>Confirm</th>";
-                                echo "<th>Reject</th>";
+                                echo "<th>Incidenčna šifra</th>";
+                                echo "<th>Ime naloge</th>";
+                                echo "<th>Potrdi</th>";
+                                echo "<th>Zavrni</th>";
                                 echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
@@ -193,8 +193,8 @@ else if ($user == "user2"){
                                         echo "<td>".$value['Id']."</td>";
                                         echo "<td>".$value['IncidentNumber']."</td>";
                                         echo "<td>".$value['StepName']."</td>";
-                                        echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Confirm</a></td>";
-                                        echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Reject</a></td>";
+                                        echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Potrdi</a></td>";
+                                        echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Zavrni</a></td>";
                                         echo "</tr>";
                                     }
                                 } else {
@@ -203,15 +203,15 @@ else if ($user == "user2"){
                                 echo "</tbody>";
                                 echo "</table>";
                                 echo "</br>";
-                                echo "<h2>User's 2 tasks</h2>";
+                                echo "<h2>Naloge uporabnika 2</h2>";
                                 echo "<table class='table'>";
                                 echo "<thead>";
                                 echo "<tr>";
                                 echo "<th>Id</th>";
-                                echo "<th>Incident number</th>";
-                                echo "<th>Task name</th>";
-                                echo "<th>Confirm</th>";
-                                echo "<th>Reject</th>";
+                                echo "<th>Incidenčna številka</th>";
+                                echo "<th>Ime naloge</th>";
+                                echo "<th>Potrdi</th>";
+                                echo "<th>Zavrni</th>";
                                 echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
@@ -222,8 +222,8 @@ else if ($user == "user2"){
                                         echo "<td>".$value['Id']."</td>";
                                         echo "<td>".$value['IncidentNumber']."</td>";
                                         echo "<td>".$value['StepName']."</td>";
-                                        echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Confirm</a></td>";
-                                        echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Reject</a></td>";
+                                        echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Potrdi</a></td>";
+                                        echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Zavrni</a></td>";
                                         echo "</tr>";
                                     }
                                 } else {
@@ -237,10 +237,10 @@ else if ($user == "user2"){
                                 echo "<thead>";
                                 echo "<tr>";
                                 echo "<th>Id</th>";
-                                echo "<th>Incident number</th>";
-                                echo "<th>Task name</th>";
-                                echo "<th>Confirm</th>";
-                                echo "<th>Reject</th>";
+                                echo "<th>Incidenčna številka</th>";
+                                echo "<th>Ime naloge</th>";
+                                echo "<th>Potrdi</th>";
+                                echo "<th>Zavrni</th>";
                                 echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
@@ -251,8 +251,8 @@ else if ($user == "user2"){
                                         echo "<td>".$value['Id']."</td>";
                                         echo "<td>".$value['IncidentNumber']."</td>";
                                         echo "<td>".$value['StepName']."</td>";
-                                        echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Confirm</a></td>";
-                                        echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Reject</a></td>";
+                                        echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Potrdi</a></td>";
+                                        echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Zavrni</a></td>";
                                         echo "</tr>";
                                     }
                                 } else {
@@ -268,10 +268,10 @@ else if ($user == "user2"){
                                 echo "<thead>";
                                 echo "<tr>";
                                 echo "<th>Id</th>";
-                                echo "<th>Incident number</th>";
-                                echo "<th>Task name</th>";
-                                echo "<th>Confirm</th>";
-                                echo "<th>Reject</th>";
+                                echo "<th>Incidenčna številka</th>";
+                                echo "<th>Ime naloge</th>";
+                                echo "<th>Potrdi</th>";
+                                echo "<th>Zavrni</th>";
                                 echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
@@ -282,8 +282,8 @@ else if ($user == "user2"){
                                         echo "<td>".$value['Id']."</td>";
                                         echo "<td>".$value['IncidentNumber']."</td>";
                                         echo "<td>".$value['StepName']."</td>";
-                                        echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Confirm</a></td>";
-                                        echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Reject</a></td>";
+                                        echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Potrdi</a></td>";
+                                        echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Zavrni</a></td>";
                                         echo "</tr>";
                                     }
                                 } else {
@@ -298,26 +298,6 @@ else if ($user == "user2"){
                     </table>
                 </div>
 
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
-                    <hr class="primary">
-                    <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
-                </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x wow bounceIn"></i>
-                    <p>123-456-6789</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
-                </div>
             </div>
         </div>
     </section>
