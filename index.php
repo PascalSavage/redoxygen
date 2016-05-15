@@ -1,6 +1,9 @@
 <?php
+$d2 = array('Value' => 300);
+$parametri = json_encode($d2);
 
-$data = array("Stepname" => "ProsnjaZaKredit");
+$data = array("Stepname" => "ProsnjaZaKredit",
+                 "Parameters" => $d2);
 $data_string = json_encode($data);
 //echo "$data_string";
                                                                                                                      

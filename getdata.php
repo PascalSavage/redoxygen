@@ -142,6 +142,7 @@ else if ($user == "user2"){
     <section>
         <div class="container">
             <div class="row">
+<<<<<<< HEAD
                 <div class="container">
                     <h2>Moje naloge</h2>
                     <table class="table">
@@ -301,6 +302,7 @@ else if ($user == "user2"){
                             ?>
                     </table>
                 </div>
+
             </div>
         </div>
     </section>
