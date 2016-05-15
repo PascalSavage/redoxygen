@@ -152,6 +152,7 @@ else if ($user == "user2"){
                               <th>Ime naloge</th>
                               <th>Potrdi</th>
                               <th>Zavrni</th>
+                              <th>Preglej</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -162,8 +163,9 @@ else if ($user == "user2"){
                                     echo "<td>".$value['Id']."</td>";
                                     echo "<td>".$value['IncidentNumber']."</td>";
                                     echo "<td>".$value['StepName']."</td>";
-                                    echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Potrdi</a></td>";
-                                    echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Zavrni</a></td>";
+                                    echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."'>Potrdi</a></td>";
+                                    echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."'>Zavrni</a></td>";
+                                    echo "<td><a href='prosnja.php?user=".$user."&id=".$value['Id']."' >Preglej</a></td>";
                                     echo "</tr>";
                                 }
                             }
@@ -193,8 +195,8 @@ else if ($user == "user2"){
                                         echo "<td>".$value['Id']."</td>";
                                         echo "<td>".$value['IncidentNumber']."</td>";
                                         echo "<td>".$value['StepName']."</td>";
-                                        echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Potrdi</a></td>";
-                                        echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Zavrni</a></td>";
+                                         echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."'>Potrdi</a></td>";
+                                    echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."'>Zavrni</a></td>";
                                         echo "</tr>";
                                     }
                                 } else {
@@ -222,8 +224,8 @@ else if ($user == "user2"){
                                         echo "<td>".$value['Id']."</td>";
                                         echo "<td>".$value['IncidentNumber']."</td>";
                                         echo "<td>".$value['StepName']."</td>";
-                                        echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Potrdi</a></td>";
-                                        echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Zavrni</a></td>";
+                                         echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."'>Potrdi</a></td>";
+                                    echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."'>Zavrni</a></td>";
                                         echo "</tr>";
                                     }
                                 } else {
@@ -251,8 +253,8 @@ else if ($user == "user2"){
                                         echo "<td>".$value['Id']."</td>";
                                         echo "<td>".$value['IncidentNumber']."</td>";
                                         echo "<td>".$value['StepName']."</td>";
-                                        echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Potrdi</a></td>";
-                                        echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Zavrni</a></td>";
+                                         echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."'>Potrdi</a></td>";
+                                    echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."'>Zavrni</a></td>";
                                         echo "</tr>";
                                     }
                                 } else {
@@ -282,8 +284,8 @@ else if ($user == "user2"){
                                         echo "<td>".$value['Id']."</td>";
                                         echo "<td>".$value['IncidentNumber']."</td>";
                                         echo "<td>".$value['StepName']."</td>";
-                                        echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Potrdi</a></td>";
-                                        echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."'". ">Zavrni</a></td>";
+                                        echo "<td><a href='confirm.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."'>Potrdi</a></td>";
+                                    echo "<td><a href='reject.php?user=".$user."&id=".$value['Id']."&inci=".$value['IncidentNumber']."&step=".$value['StepName']."&value=".$value['Parameters']['Value']."'>Zavrni</a></td>";
                                         echo "</tr>";
                                     }
                                 } else {
