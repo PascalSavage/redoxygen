@@ -1,18 +1,18 @@
 <?php
 
-$user = "user3";
+//$user = "user3";
 $pass = "P@ssword";
 
-$id = "0514238c669ca392205fbc4b6b79be";
+/*$id = "0514238c669ca392205fbc4b6b79be";
 $incident = 37;
 $step = "Nakazilo";
-$value = 20000;
+$value = 20000;*/
 
 $user = $_GET['user'];
 $id = $_GET['id'];
 $incident = $_GET['inci'];
 $step = $_GET['step'];
-
+$value = 20000;
 
 $d2 = array("Value" => $value);
 $parametri = json_encode($d2);
@@ -31,8 +31,9 @@ curl_setopt($ch, CURLOPT_USERPWD, "crea0\\".$user.":".$pass);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
     'Content-Type: application/json',                                                                                
     'Content-Length: ' . strlen($data_string))                                                                       
-);                                                                                                                   
-                                                                                                                     
+);                     
+$newURL = "getdata.php?user=".$user;
+ header('Location: '.$newURL);                                                                                                                    
 $result = curl_exec($ch);
 
 ?>
