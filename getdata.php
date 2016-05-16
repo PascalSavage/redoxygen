@@ -1,6 +1,6 @@
 <?php
 
-$user = $_GET["user"];
+/* $user = $_GET["user"];
 $pass = "P@ssword";
 $url = "http://88.200.23.139/Crea.Ultimus.Api/api/Process/Nabava/";
 
@@ -45,7 +45,7 @@ else if ($user == "user2"){
     curl_setopt($ch, CURLOPT_URL, $url);
     $result3 = curl_exec($ch);
     curl_close($ch);
-}
+}*/
 
 //echo $obj;
 /*foreach ($obj as $value) {
@@ -55,7 +55,6 @@ else if ($user == "user2"){
 
 ?>
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -156,8 +155,27 @@ else if ($user == "user2"){
                             </tr>
                         </thead>
                         <tbody>
+                            <?php 
+                                    //demo code
+                                    $idD = 4534667535;
+                                    $incD = 54;
+                                    $stepD = "odobri kredit";
+                                    echo "<tr>";
+                                    echo "<td>".$idD."</td>";
+                                    echo "<td>".$incD."</td>";
+                                    echo "<td>".$stepD."</td>";
+                                    echo "<td><a href='#'>Potrdi</a></td>";
+                                    echo "<td><a href='#'>Zavrni</a></td>";
+                                    echo "<td><a href='#'>Preglej</a></td>";
+                                    echo "</tr>";
+                            
+                            ?>
+                            
+                            
                             <?php
-                            if(sizeof($obj) > 0){
+                            //real code
+                            
+                          /* if(sizeof($obj) > 0){
                                 foreach ($obj as $value) {
                                     echo "<tr>";
                                     echo "<td>".$value['Id']."</td>";
@@ -294,7 +312,7 @@ else if ($user == "user2"){
                                 echo "</tbody>";
                                 echo "</table>";
                                 echo "</br>";
-                            }
+                            }*/
                                                     
                             ?>
                     </table>
